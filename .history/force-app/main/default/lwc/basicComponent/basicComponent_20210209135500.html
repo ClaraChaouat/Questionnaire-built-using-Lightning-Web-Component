@@ -1,0 +1,23 @@
+<template> 
+    <template if:true={getActiveSection}>  
+        <lightning-progress-indicator class="progress-style" current-step={getActiveSection} 
+                        type="base" variant="base">
+            <template for:each={sections} for:item="section">
+                <li key={section.id}>
+                    <lightning-progress-step class="step-style" label={section.label} 
+                                value={section.value}>
+                    </lightning-progress-step>
+                </li>
+            </template>
+        </lightning-progress-indicator>
+    </template> 
+  
+
+    <template if:true={activeQuestions}>
+        <lightning-card title="All questions by customer typebis">
+            <c-section-component questions={activeQuestions} is-last={isLastSection} is-first={isFirstSection} is-intermediate={isIntermediate} questions-active={activeQuestions}
+                                 active-section={getActiveSection} onnextpage={stepChosenByButtonHandler} onpreviouspage={stepChosenByButtonHandler}>
+            </c-section-component>
+        </lightning-card>
+    </template>
+</template>

@@ -1,0 +1,31 @@
+<template>
+    <ul>
+        <template for:each={questions} for:item="question">
+            <li key={question.Id}> 
+                <c-question-tile class="slds-m-top_xxx-small" question={question} onfireselectedoption={retrieveSelectedOption} 
+                                all-selected-options={selectedOptions}>                    
+                </c-question-tile>                              
+            </li>
+        </template>
+    </ul>
+    <template if:true={isLast}>
+        <div class="background">
+            <h2 class="slds-text-heading_small  slds-align_absolute-center"></h2>
+                <lightning-button variant="brand" label="<Previous" title="Primary action"  onclick={handleClickPrevious} class= "slds-m-right_xx-small slds-m-top_none"></lightning-button>
+                <lightning-button variant="brand" label="Submit questionnaire" title="Primary action" onclick={handleClickFinal} class="style slds-m-top_none" disabled={isDisabledLastQuestion}></lightning-button> 
+        </div>
+    </template>
+    <template if:true={isFirst}>
+    <div class="background slds-m-top_xxx-small">
+        <h2 class="slds-m-top_none slds-text-heading_small slds-align_absolute-center"></h2>
+            <lightning-button variant="brand" label="Submit answers" title="Primary action" onclick={handleClickNext} class="style" disabled={isDisabled}></lightning-button>
+    </div>
+    </template>
+    <template if:true={isIntermediate}>
+        <div class="background">
+            <h2 class="slds-text-heading_small slds-m-top_none slds-align_absolute-center"></h2>
+                <lightning-button class= "slds-m-top_none slds-m-right_xx-small" variant="brand" label="<Previous" title="Primary action" onclick={handleClickPrevious}></lightning-button>
+                <lightning-button  class= "slds-m-top_none" variant="brand" label="Submit answers" title="Primary action" onclick={handleClickNext} disabled={isDisabled}></lightning-button>
+        </div>
+        </template>
+</template>

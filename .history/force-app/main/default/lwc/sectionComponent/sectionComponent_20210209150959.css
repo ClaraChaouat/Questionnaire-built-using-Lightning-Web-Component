@@ -1,0 +1,11 @@
+.background{
+    background-color:#F7F7F9;
+}
+
+.style{
+    "slds-m-around_none"
+    --sds-c-button-brand-color-background:#2AE1C2;
+    --sds-c-button-brand-color-border:#2AE1C2;
+    
+}
+

@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-m-top_none slds-p-around_medium lgc-bg">
+        <lightning-tile>
+            <h1 class="question-name-style">{question.Name}</h1>
+            <template if:true={options}>
+                <div class="slds-form-element__control slds-m-around_none slds-m-top_none>
+                    <lightning-radio-group name={options}
+                        label="Please select an answer"
+                        options={options}
+                        type="radio"
+                        onchange={handleChange}
+                        value={valueSelected}
+                        required>
+                    </lightning-radio-group>
+                </div>
+                <div id="error_01" class="slds-m-around_none slds-form-element__help">*Required field</div>
+            </template>
+        </lightning-tile>       
+    </div>
+</template>
