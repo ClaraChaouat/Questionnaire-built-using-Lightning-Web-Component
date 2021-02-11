@@ -1,22 +1,22 @@
-<template> 
-    <template if:true={getActiveSection}>  
-        <lightning-progress-indicator  class="progress-style" current-step={getActiveSection} 
-                        type="base" variant="base">
+<template>
+    <template if:true={getActiveSection}>
+        <lightning-progress-indicator class="progress-style" current-step={getActiveSection} type="base" variant="base">
             <template for:each={sections} for:item="section">
                 <li key={section.id}>
-                    <lightning-progress-step class="step-style" label={section.label} 
-                                value={section.value}>
+                    <lightning-progress-step class="step-style" label={section.label} value={section.value}>
                     </lightning-progress-step>
                 </li>
             </template>
         </lightning-progress-indicator>
-    </template> 
-  
+    </template>
+
 
     <template if:true={activeQuestions}>
         <lightning-card class="slds-m-top_none slds-m-around_none" title="All questions by customer type">
-            <c-section-component class="slds-m-around_none" questions={activeQuestions} is-last={isLastSection} is-first={isFirstSection} is-intermediate={isIntermediate} questions-active={activeQuestions}
-                                 active-section={getActiveSection} onnextpage={stepChosenByButtonHandler} onpreviouspage={stepChosenByButtonHandler}>
+            <c-section-component class="slds-m-around_none" questions={activeQuestions} is-last={isLastSection}
+                is-first={isFirstSection} is-intermediate={isIntermediate} questions-active={activeQuestions}
+                active-section={getActiveSection} onnextpage={stepChosenByButtonHandler}
+                onpreviouspage={stepChosenByButtonHandler}>
             </c-section-component>
         </lightning-card>
     </template>

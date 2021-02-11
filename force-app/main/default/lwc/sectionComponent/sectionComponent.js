@@ -1,8 +1,6 @@
 import { LightningElement, api } from 'lwc'
-
 import { ShowToastEvent } from 'lightning/platformShowToastEvent'
 import saveQuestionnaireAnswers from '@salesforce/apex/SaveAnswers.saveQuestionnaireAnswers'
-
 
 export default class SectionComponent extends LightningElement {
   @api questions
@@ -17,7 +15,7 @@ export default class SectionComponent extends LightningElement {
   @api activeSection
   selectedOptions = {}
   @api questionsActive
-  activeSectionSelectedOptions;
+  activeSectionSelectedOptions
 
   handleClickFinal () {
     var allQuestions = []
@@ -55,31 +53,32 @@ export default class SectionComponent extends LightningElement {
 
   retrieveSelectedOption (event) {
     if (this.selectedOptions[event.detail.sectionNumber]) {
-      innerDictionary = this.selectedOptions[event.detail.sectionNumber];
+      innerDictionary = this.selectedOptions[event.detail.sectionNumber]
     } else {
-      var innerDictionary = {};
+      var innerDictionary = {}
     }
 
-    innerDictionary[event.detail.id] = event.detail.selectedOption;
-    this.selectedOptions[event.detail.sectionNumber] = innerDictionary;
-    this.activeSectionSelectedOptions = this.selectedOptions[this.activeSection];
+    innerDictionary[event.detail.id] = event.detail.selectedOption
+    this.selectedOptions[event.detail.sectionNumber] = innerDictionary
+    this.activeSectionSelectedOptions = this.selectedOptions[this.activeSection]
 
     if (
       Object.keys(this.activeSectionSelectedOptions).length ==
-      this.questions.length) {
-          this.isDisabled = false;
-          this.isDisabledLastQuestion = false;
+      this.questions.length
+    ) {
+      this.isDisabled = false
+      this.isDisabledLastQuestion = false
     } else {
       this.isDisabled = true
     }
   }
 
-  handleClickPrevious(){
-    this.activeSection = Number(this.activeSection) - 1;
+  handleClickPrevious () {
+    this.activeSection = Number(this.activeSection) - 1
     const previousSection = new CustomEvent('previouspage', {
       detail: this.activeSection
-    });
-    this.dispatchEvent(previousSection);
+    })
+    this.dispatchEvent(previousSection)
     this.isDisabled = false
     this.isDisabledLastQuestion = false
   }
