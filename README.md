@@ -22,6 +22,7 @@ At the end of the questionnaire, the questionnaire can be submitted only if the 
 
 ## Technologies used
 - Lightning Web Component framework,
+- Javascript,
 - Apex,
 - SOQL.
 
