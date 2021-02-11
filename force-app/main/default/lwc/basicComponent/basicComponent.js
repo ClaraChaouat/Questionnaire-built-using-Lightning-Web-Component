@@ -8,9 +8,6 @@ export default class BasicComponent extends LightningElement {
   lastSectionValue
   isDisabled
 
-  // NOTE: the following two variables are hard-coded
-  // Future development will dynamically change the activeSection
-  // And automatically pull the relevant customer type!
   activeSection = 1
 
   curCustomerType = 'New Private Customer'

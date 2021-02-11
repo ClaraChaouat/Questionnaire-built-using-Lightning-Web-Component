@@ -1,6 +1,5 @@
 public with sharing class SaveAnswers {
         @AuraEnabled
-        //public static String saveQuestionnaireAnswers(List<String> questionsSubmitted, List<String> answersSubmitted){
         public static String saveQuestionnaireAnswers(List<String> allQuestions, List<String> allAnswers){
 
                 Questionnaire__c questionR = new Questionnaire__c(Name='New Questionnaire', Contact__c='0033N00000PiEfaQAF');
