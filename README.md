@@ -3,7 +3,7 @@
   <img width="800" src="./images/LendAiQuestionnaire.gif"/>
 </p>
 
-## Description
+## Description :writing_hand:
 The aim of this project is to build a questionnaire using Lightning Web Component, the Salesforce framework.<br/>
 The goal of the questionnaire is to assess the eligibilty of potential loan applicants.<br/>
 It has different questions divided into several sections, selected according to the type of clients.<br/>
