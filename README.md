@@ -8,10 +8,10 @@ The aim of this project is to build a questionnaire using Lightning Web Componen
 The goal of the questionnaire is to assess the eligibilty of potential loan applicants.<br/>
 It has different questions divided into several sections, selected according to the type of clients.<br/>
 
-### Back-end side
+### Back-end side :male_detective:
 The idea is to select all the questions and the corresponding answers by customer type and by questionnaire section.
 
-### Front-end side
+### Front-end side :artist:
 #### Questionnaire characteristics
 ##### Disabling/enabling buttons
 The customer has to answer all the questions of each section before being able to submit the answers and move on to the next questions section => Disabling/enabling the "Submit answers" button weither the customer has or not answsered all the questions section. 
@@ -20,13 +20,13 @@ The customer should be able to go back to the previous section to modifiy the an
 ##### Submit questionnaire button
 At the end of the questionnaire, the questionnaire can be submitted only if the customer has answered all the questions => creating a "Submit questionnaire" button Disabling/enabling it weither the customer has or not answsered all the questions sections. 
 
-## Technologies used
+## Technologies used :woman_technologist:
 - Lightning Web Component framework,
 - Javascript,
 - Apex,
 - SOQL.
 
-## Installation
+## Installation :man_mechanic:
 ### Salesforce App
 
 This guide helps Salesforce developers who are new to Visual Studio Code go from zero to a deployed app using Salesforce Extensions for VS Code and Salesforce CLI.
